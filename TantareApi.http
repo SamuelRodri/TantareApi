@@ -1,6 +1,21 @@
-@TantareApi_HostAddress = http://localhost:5175
+@TantareApi_HostAddress = https://localhost:7024
 
-GET {{TantareApi_HostAddress}}/weatherforecast/
-Accept: application/json
+
+
+POST {{TantareApi_HostAddress}}/worlds
+Content-Type: application/json
+
+{
+    "Id": 1,
+    "Name": "Tantare"
+}
+
+###
+
+GET {{TantareApi_HostAddress}}/worlds
+
+###
+
+GET {{TantareApi_HostAddress}}/worlds/1
 
 ###
