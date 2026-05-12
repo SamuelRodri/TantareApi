@@ -1,21 +1,20 @@
 @TantareApi_HostAddress = https://localhost:7024
 
-
-
 POST {{TantareApi_HostAddress}}/worlds
 Content-Type: application/json
 
 {
-    "Id": 1,
-    "Name": "Tantare"
+  "Id": 1,
+  "Name": "Tantare"
 }
 
 ###
 
-GET {{TantareApi_HostAddress}}/worlds
+@id=1
+GET {{TantareApi_HostAddress}}/worlds/{{id}}
 
 ###
 
-GET {{TantareApi_HostAddress}}/worlds/1
+GET {{TantareApi_HostAddress}}/worlds
 
 ###
