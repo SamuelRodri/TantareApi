@@ -5,7 +5,7 @@
         public int Id { get; set; }
         public required string Name { get; set; }
 
-        public DateTime? birthDate { get; set; }
-        public DateTime? deathDate { get; set;  }
+        public DateOnly? birthDate { get; set; }
+        public DateOnly? deathDate { get; set;  }
     }
 }

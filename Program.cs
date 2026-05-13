@@ -9,5 +9,6 @@ var app = builder.Build();
 
 app.MapWorldEndpoints();
 app.MapLocationEndpoints();
+app.MapCharacterEndpoints();
 
 app.Run();
