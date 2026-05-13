@@ -11,7 +11,7 @@ namespace TantareApi.Endpoints
         {
             var group = app.MapGroup("/worlds");
 
-            group.MapPost("/", async (World world, TantareDb db) =>
+            group.MapPost("/", async (TantareDb db, World world) =>
             {
                 db.Worlds.Add(world);
                 await db.SaveChangesAsync();

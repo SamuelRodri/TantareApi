@@ -8,5 +8,6 @@ builder.Services.AddDbContext<TantareDb>(opt => opt.UseInMemoryDatabase("Tantare
 var app = builder.Build();
 
 app.MapWorldEndpoints();
+app.MapLocationEndpoints();
 
 app.Run();
