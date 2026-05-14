@@ -10,10 +10,12 @@ namespace TantareApi.Extensions
             {
                 Name = dto.name,
                 birthDate = dto.birthday,
-                deathDate = dto.deathDay
+                deathDate = dto.deathDay,
+                WorldId = dto.worldId,
+                LocationId = dto.locationId ?? 0
             };
 
         public static CharacterDto ToCharacterDto(this Character character) =>
-            new(character.Id, character.Name, character.birthDate, character.deathDate);
+            new(character.Id, character.Name, character.birthDate, character.deathDate, character.WorldId, character.LocationId);
     }
 }

@@ -23,7 +23,7 @@ namespace TantareApi.Endpoints
 
             group.MapGet("/", async (TantareDb db) =>
             {
-                return TypedResults.Ok(await db.Worlds.Include(w => w.Locations).Select(w => w.ToWorldDto()).ToListAsync());
+                return TypedResults.Ok(await db.Worlds.Select(w => w.ToWorldDto()).ToListAsync());
             });
 
             group.MapGet("/{id}", async Task<Results<Ok<WorldDto>, NotFound>> (int id, TantareDb db) =>

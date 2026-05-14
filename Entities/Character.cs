@@ -7,5 +7,8 @@
 
         public DateOnly? birthDate { get; set; }
         public DateOnly? deathDate { get; set;  }
+
+        public int WorldId { get; set; }
+        public int LocationId { get; set; }
     }
 }
